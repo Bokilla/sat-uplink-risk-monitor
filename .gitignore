@@ -1,0 +1,26 @@
+# Zugangsdaten
+api-credentials/
+
+# Lokale Konfiguration
+site-config.json
+
+# API Dumps
+api-dump/
+
+# Icons
+icons/
+
+# pre-Alpha Testversionen
+pre-alpha/
+
+# VS Code
+.vscode/
+
+# PowerShell Logs
+*.log
+
+# Backup-Dateien
+*.bak
+
+# Temporäre Dateien
+*.tmp

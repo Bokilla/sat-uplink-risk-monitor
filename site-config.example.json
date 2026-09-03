@@ -1,0 +1,130 @@
+{
+  "Grafana": {
+    "Url": "https://grafana.example.com",
+    "DatasourceUid": ""
+  },
+
+  "Satellite": {
+    "Name": "Example Satellite",
+    "Transponder": "",
+    "UplinkFrequencyMHz": 10000.0000,
+
+    "Downlink": {
+      "FrequencyGHz": 11.000,
+      "Polarization": "",
+      "SymbolRateMsym": 30.000,
+      "Modulation": "",
+      "FEC": "",
+      "NetRateMbit": 60.00
+    }
+  },
+
+  "Sites": {
+    "Primary": {
+      "DisplayName": "Primary Uplink Site",
+
+      "Location": {
+        "Latitude": 0.0,
+        "Longitude": 0.0
+      },
+
+      "Infrastructure": {
+        "AntennaDiameterM": 8.0,
+        "TxPowerDbm": -20
+      },
+
+      "Monitoring": {
+        "Active": {
+          "Metric": "primary_site_active",
+          "ActiveValue": 1,
+          "InactiveValue": 0
+        },
+
+        "Path": {
+          "Metric": "primary_site_path",
+          "PathAValue": 1,
+          "PathBValue": 0
+        },
+
+        "IRDMargin": {
+          "Metric": "primary_site_ird_margin",
+          "ScaleFactor": 10
+        },
+
+        "BeaconLevel": {
+          "Metric": "primary_site_beacon_level",
+          "ScaleFactor": 100
+        },
+
+        "Azimuth": {
+          "Metric": "primary_site_azimuth",
+          "ScaleFactor": 1000
+        },
+
+        "Elevation": {
+          "Metric": "primary_site_elevation",
+          "ScaleFactor": 1000
+        }
+      }
+    },
+
+    "Backup": {
+      "DisplayName": "Backup Uplink Site",
+
+      "Location": {
+        "Latitude": 0.0,
+        "Longitude": 0.0
+      },
+
+      "Infrastructure": {
+        "AntennaDiameterM": 7
+      },
+
+      "Monitoring": {
+        "Active": {
+          "Metric": "backup_site_active",
+          "ActiveValue": 1,
+          "InactiveValue": 0
+        },
+
+        "Path": {
+          "Metric": "backup_site_path",
+          "PathAValue": 1,
+          "PathBValue": 0
+        },
+
+        "IRDMargin": {
+          "Metric": "backup_site_ird_margin",
+          "ScaleFactor": 10
+        },
+
+        "BeaconLevel": {
+          "Metric": "backup_site_beacon_level",
+          "ScaleFactor": 100
+        },
+
+        "Azimuth": {
+          "Metric": "backup_site_azimuth",
+          "ScaleFactor": 1000
+        },
+
+        "Elevation": {
+          "Metric": "backup_site_elevation",
+          "ScaleFactor": 1000
+        }
+      }
+    }
+  },
+
+  "RiskModel": {
+    "LinkHealth": {
+      "MarginWeight": 0.7,
+      "BeaconWeight": 0.3
+    },
+
+    "OverallRisk": {
+      "LinkWeight": 0.7,
+      "WeatherWeight": 0.3
+    }
+  }
+}
